@@ -1,0 +1,10 @@
+name: Dweller
+displayName: "Dweller"
+description: "Dweller"
+author: "Flin"
+java: true
+main: "dweller.Dweller"
+repo: FlinTyX/Dweller
+keepOutlines: true
+version: "v1.0"
+minGameVersion: 146
