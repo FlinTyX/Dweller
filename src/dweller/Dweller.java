@@ -9,7 +9,6 @@ import arc.util.serialization.Jval;
 import dweller.ui.dialogs.UpdateDialog;
 import mindustry.game.EventType.*;
 import mindustry.mod.Mod;
-import mindustry.mod.Mods;
 
 public class Dweller extends Mod {
     public Dweller(){
@@ -24,9 +23,9 @@ public class Dweller extends Mod {
     }
 
     public void checkReleases(){
-        Mods.ModMeta meta = mods.locateMod("dweller").meta;
+        var meta = mods.locateMod("dweller").meta;
 
-        Http.get(ghApi + "/repos/" + meta.name + "/releases", res -> {
+        Http.get(ghApi + "/repos/" + meta.repo + "/releases", res -> {
             var json = Jval.read(res.getResultAsString());
             Jval release = json.asArray().get(0);
 
